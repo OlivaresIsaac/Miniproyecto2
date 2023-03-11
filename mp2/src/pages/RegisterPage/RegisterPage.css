@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.fondo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, black, #51047D);
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    background: black;
+    text-align: center;
+    padding: 20px 25px;
+    box-shadow: 0 5px 10px black;
+}
+
+form .titulo{
+    color: white;
+    font-size: 35px;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+form label{
+    background-color: black;
+    margin-bottom: 30px;
+}
+
+form label input{
+    background-color: black;
+    color: white;
+    outline: none;
+    border: none;
+    border-bottom: solid 1px;
+    font-size: 18px;
+}
+
+form button{
+    color: white;
+    border: none;
+    background: #51047D;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
