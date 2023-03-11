@@ -54,16 +54,18 @@ useEffect(() => {
     return(
         
         <div className="fondo main-column">
-        
-        <Searcher movieSetter={setCurrentMovies}/> 
-        <button className="boton" onClick={submitNew}>New Movies</button>
+            <div className="masarriba">
+                <button className="botontop" onClick={submitNew}>New Movies</button>
+                <Searcher movieSetter={setCurrentMovies}/> 
+                
 
-        <button className="boton" onClick={submitNext}>Next Movies</button>
-        <div className="paginas">
-            <button className="boton" onClick={Back}>ant</button>
-            <a>{actpag}</a>
-            <button className="boton" onClick={Next}>sig</button>
-        </div>
+                <button className="botontop" onClick={submitNext}>Upcoming Movies</button>
+            </div>
+            <div className="paginas">
+                <button className="boton" onClick={Back}>Prev</button>
+                <a>{actpag}</a>
+                <button className="boton" onClick={Next}>Next</button>
+            </div>
 
 
             <div className="movie-flex">
