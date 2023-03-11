@@ -4,6 +4,7 @@ import { LandingPage } from "./pages/LandingPage/LandingPage";
 import { LoginPage } from "./pages/LoginPage/LoginPage";
 import { RegisterPage } from "./pages/RegisterPage/RegisterPage";
 import { Layout } from "./components/Layout/Layout";
+import { PrivateRoute } from "./components/PrivateRoute/PrivateRoute";
 import './App.css';
 
 function App() {
@@ -17,7 +18,10 @@ function App() {
       <Routes>
         <Route element={<Layout/>}>
         {/* Layout */}
-          <Route path={LANDING_URL} exact={true} element={<LandingPage />} />
+          <Route path={LANDING_URL} exact={true} element={
+               <PrivateRoute>
+               <LandingPage/>
+              </PrivateRoute>}/>
           
           <Route path={LOGIN_URL} exact={true} element={<LoginPage />} />
 
