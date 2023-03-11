@@ -3,9 +3,9 @@ import { loginWithEmailAndPassword, signInWithGoogle } from "../../firebase/auth
 export function LandingPage(){
    
     return(
-        <>
-        <h1>Soy landing</h1>
-        <button onClick={ signInWithGoogle }> login</button>
-        </>
+        <div className='fondo'>
+            <h1>Soy landing</h1>
+            <button onClick={ signInWithGoogle }> login</button>
+        </div>
     )
 }
