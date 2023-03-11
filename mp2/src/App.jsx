@@ -4,8 +4,18 @@ import { LandingPage } from "./pages/LandingPage/LandingPage";
 import { LoginPage } from "./pages/LoginPage/LoginPage";
 import { RegisterPage } from "./pages/RegisterPage/RegisterPage";
 import './App.css';
+import { useEffect } from "react";
+import { fetchMovies } from "./utils/api";
+import { useMovies } from "./hooks/useMovies";
 
 function App() {
+
+  const {getMovies} = useMovies();
+
+  useEffect(() => {
+    getMovies();
+  }, []);
+
   return (
   
 
