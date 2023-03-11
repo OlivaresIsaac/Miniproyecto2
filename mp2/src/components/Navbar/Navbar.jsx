@@ -28,10 +28,22 @@ const Navbar = () => {
                     <img src={RotomTV} className="imgNav"></img>
                 </Link>
             </div>
+
+
+
             <div className='navder'>
-                <div className='Navtxt'>
+            {!!user && (
+                    <div className='Navtxt'>
+                    <Link to={LOGIN_URL}>{user.displayName}</Link>
+                    </div>
+                )}
+                {!user && (
+                   <div className='Navtxt'>
                    <Link to={LOGIN_URL}>Login</Link>
                 </div>
+                )}
+
+                
                 <div className='Navtxt'>
                    <Link to={REGISTER_URL}>Register</Link>
                 </div>

@@ -12,13 +12,12 @@ export const signInWithGoogle = async () => {
             const newUser = new User(result.user.uid, result.user.displayName, result.user.email)
             await createUserProfile(result.user.uid, newUser.toObject())
         }
-        return true
+      
 
     } catch (error) {
         console.log(error)
-        alert("Ha ocurrido un error inesperado, intentelo de nuevo")
-
-        return error
+        // alert("Ha ocurrido un error inesperado, intentelo de nuevo")
+return error
     }
 }
 
@@ -31,7 +30,7 @@ export const registerWithEmailAndPassword = async (email, password, allData) => 
             
         await createUserProfile(result.user.uid, newUser.toObject())
 
-        return true
+       
     
     } catch (error) {
         console.log(error)
@@ -42,7 +41,7 @@ export const registerWithEmailAndPassword = async (email, password, allData) => 
             alert("Alerta, error al momento del registro, intente de nuevo")
           }
          
-        return error
+       
 
     }
 }
@@ -50,7 +49,7 @@ export const registerWithEmailAndPassword = async (email, password, allData) => 
 export const loginWithEmailAndPassword = async (email, password) => {
     try {
         await signInWithEmailAndPassword(auth, email, password)
-        return true
+       
     } catch (error) {
         console.log(error)
         if (error.code === "auth/wrong-password") {
@@ -61,7 +60,7 @@ export const loginWithEmailAndPassword = async (email, password) => {
             alert ("Ha ocurrido un error inesperado")
         }
         
-        return error
+        
     }
 }
 

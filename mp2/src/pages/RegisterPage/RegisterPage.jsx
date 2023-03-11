@@ -1,21 +1,14 @@
 import { useState } from "react"
-import { useNavigate } from "react-router"
-import { LANDING_URL } from "../../constants/url"
 import { registerWithEmailAndPassword, signInWithGoogle } from "../../firebase/auth-service"
 import './RegisterPage.css'
 
 export function RegisterPage(){
 
   const handleRegisterWithGoogle = async () => {
-  const googlePromise = await signInWithGoogle
-  googlePromise().then((result) => {
-    if (result === true) {
-      navigate(LANDING_URL)
-    } 
-    })
+  await signInWithGoogle()
  }
 
-  const navigate = useNavigate()
+
   const [formData, setFormData] = useState({
       displayName: "",
       email: "",
@@ -35,11 +28,7 @@ const handleSubmit = async (event) => {
   const {email, password} = formData
   if (formData.password) {
     if(formData.confirmPassword === password)  {
-    await registerWithEmailAndPassword(email, password, formData).then((result) => {
-      if (result === true) {
-        navigate(LANDING_URL)
-      } 
-    })
+    await registerWithEmailAndPassword(email, password, formData)
       
     } else {
       alert("Alerta, la constraseña no coincide en ambos campos, por favor intentelo de nuevo")

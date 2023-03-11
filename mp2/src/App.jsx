@@ -22,12 +22,12 @@ function App() {
       <Routes>
         <Route element={<Layout/>}>
         {/* Layout */}
-        <Route path={LANDING_URL} exact={true} element={
-                <LandingPage/>}/>
-          {/* <Route path={LANDING_URL} exact={true} element={
+        {/* <Route path={LANDING_URL} exact={true} element={
+                <LandingPage/>}/> */}
+          <Route path={LANDING_URL} exact={true} element={
                <PrivateRoute>
                <LandingPage/>
-              </PrivateRoute>}/> */}
+              </PrivateRoute>}/>
           
           <Route path={LOGIN_URL} exact={true} element={<LoginPage />} />
 
