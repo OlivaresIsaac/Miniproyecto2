@@ -1,6 +1,7 @@
 import {Searcher}  from "../../components/Searcher/Searcher";
 import { useState, useEffect } from "react"
 import './LandingPage.css'
+import Card from "../../components/Card/Card";
 // import { useUserContext } from "../../contexts/UserContext";
 
 export function LandingPage(){
@@ -8,22 +9,21 @@ export function LandingPage(){
 const [currentMovies, setCurrentMovies] = useState([])
 
 useEffect(() => {
-    console.log(currentMovies)
+    
   }, [currentMovies])
 
-console.log(currentMovies)
     // const {user} = useUserContext(); 
     // console.log(user)
 
     return(
-        <div className="fondo main-column">
+        <div className="fondoSearch main-column">
         
             <Searcher movieSetter={setCurrentMovies}/> 
 
            {
             currentMovies.map((movie, key) => {
                 return ( 
-                <h1>{movie.title}</h1>
+                <Card movie={movie} key={key}/>
             )})
            }
 

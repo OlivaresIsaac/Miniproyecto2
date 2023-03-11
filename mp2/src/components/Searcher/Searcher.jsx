@@ -13,7 +13,7 @@ export function Searcher({movieSetter}){
     }
 
     const submit = async () => {
-        const query = await fetchMovieName(movieInput)
+        const query = await fetchMovieName(movieInput, 1)
         movieSetter(query.data.results)
     }
 

@@ -1,9 +1,12 @@
-.fondo{
+.fondoSearch{
     display: flex;
+    flex-direction: column;
+    flex-wrap:nowrap;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
     background-color: linear-gradient(to right, black, #51047D);
+    overflow-y: auto;
 }
 
 .main-column {
