@@ -8,7 +8,6 @@ export default function Card({movie}) {
     const goDetails = () => {
        
         const route = "/details/"+movie.id
-        console.log(route)
         navigate(route)
     }
 

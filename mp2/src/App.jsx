@@ -2,6 +2,7 @@ import { LANDING_URL, LOGIN_URL,REGISTER_URL, DETAIL_URL } from "./constants/url
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import { LandingPage } from "./pages/LandingPage/LandingPage";
 import { LoginPage } from "./pages/LoginPage/LoginPage";
+import { DetailPage } from "./pages/DetailPage/DetailPage";
 import { RegisterPage } from "./pages/RegisterPage/RegisterPage";
 import { Layout } from "./components/Layout/Layout";
 import { PrivateRoute } from "./components/PrivateRoute/PrivateRoute";
@@ -19,29 +20,28 @@ function App() {
     getMovieById(500)
   }, [])
 
-    return(
-      <DetailCard movie={singleMovie}/>
-    )
+    // return(
+    //   <DetailCard movie={singleMovie}/>
+    // )
 
-//   return (
+   return (
+     <BrowserRouter>
 
-//     <BrowserRouter>
-
-//     {/* <Sidebar /> */}
+     {/* <Sidebar /> */}
  
-//       <Routes>
-//         <Route element={<Layout/>}>
-//         {/* Layout */}
-//         {/* <Route path={LANDING_URL} exact={true} element={
-//                 <LandingPage/>}/> */}
-//           <Route path={LANDING_URL} exact={true} element={
-//                <PrivateRoute>
-//                <LandingPage/>
-//               </PrivateRoute>}/>
+      <Routes>
+        <Route element={<Layout/>}>
+         {/* Layout */}
+         {/* <Route path={LANDING_URL} exact={true} element={
+                 <LandingPage/>}/> */}
+          <Route path={LANDING_URL} exact={true} element={
+                <PrivateRoute>
+               <LandingPage/>
+              </PrivateRoute>}/>
           
-//           <Route path={LOGIN_URL} exact={true} element={<LoginPage />} />
+          <Route path={LOGIN_URL} exact={true} element={<LoginPage />} />
 
-//           <Route path={REGISTER_URL} exact={true} element={<RegisterPage />} />
+          <Route path={REGISTER_URL} exact={true} element={<RegisterPage />} />
 
           <Route path={DETAIL_URL} exact={true} element={
               <PrivateRoute>
@@ -52,11 +52,11 @@ function App() {
         </Route>
         {/* </Route> */}
        
-//       </Routes>
+       </Routes>
 
 
-// </BrowserRouter>
-//   );
+ </BrowserRouter>
+   );
 }
 
 export default App;

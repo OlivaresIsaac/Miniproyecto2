@@ -3,6 +3,7 @@ import { useMovies } from '../../hooks/useMovies';
 import styles from "./DetailCard.module.css"
 
 function DetailCard({movie}) {
+    console.log(movie)
     const BASE_IMG_URL = "https://image.tmdb.org/t/p/original";
 
     if(Object.entries(movie).length !== 0){
