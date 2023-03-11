@@ -7,11 +7,11 @@ import './App.css';
 import { useEffect } from "react";
 import { fetchMovies } from "./utils/api";
 import { useMovies } from "./hooks/useMovies";
+import Card from "./components/Card/Card";
 
 function App() {
 
   return (
-  
 
     <BrowserRouter>
 
