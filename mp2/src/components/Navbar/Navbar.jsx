@@ -19,13 +19,13 @@ const Navbar = () => {
         //console.log("Saliendo...")
         await logout()
     }
-    const profileRoute = (!!user) ? "/profile/"+user.id : LANDING_URL
+
     return(
         <ul>
             <div className='navgen'>
             <div className='Nav'>
                 <Link to={LANDING_URL}>
-                    <img src={RotomTV} className="imgNav"></img>
+                    <img src={RotomTV} className="imgNav" alt='rotom'></img>
                 </Link>
             </div>
 

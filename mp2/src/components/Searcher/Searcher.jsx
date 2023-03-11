@@ -1,8 +1,8 @@
 import './Searcher.css'
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import { fetchMovieName} from "../../utils/api"
 import { FaSearch } from 'react-icons/fa'
-import { Component } from '@firebase/component'
+
 
 export function Searcher({movieSetter}){
     const [movieInput, setMovieInput] = useState("")
