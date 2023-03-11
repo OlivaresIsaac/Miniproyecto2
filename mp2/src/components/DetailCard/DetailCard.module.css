@@ -1,0 +1,22 @@
+.detailContainer{
+    margin: auto;
+    background-color: red;
+    width: 70%;
+}
+
+.detailPoster{
+    width: 20%;
+}
+
+.detailTitle{
+    background-color: transparent;
+    color: white;
+}
+
+.detailText{
+    background-color: transparent;
+}
+
+.detailCompany{
+    background-color: transparent;
+}
