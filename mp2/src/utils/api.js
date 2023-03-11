@@ -11,6 +11,14 @@ export async function fetchMovies(){
     return axiosInstance.get(`/discover/movie${KEY}`);
 }
 
-export async function fetchSingleMovie(movie_id){
-    return axiosInstance.get(`/discover/movie/${movie_id}${KEY}`);
+export async function fetchMovieId(movie_id){
+    return axiosInstance.get(`/movie/${movie_id}${KEY}`);
+}
+
+export async function fetchUpcoming(){
+    return axiosInstance.get(`/movie/upcoming${KEY}`);
+}
+
+export async function fetchMovieName(movie_name){
+    return axiosInstance.get(`/search/movie${KEY}&query=${movie_name}`);
 }

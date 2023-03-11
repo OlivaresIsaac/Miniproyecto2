@@ -10,12 +10,6 @@ import { useMovies } from "./hooks/useMovies";
 
 function App() {
 
-  const {getMovies} = useMovies();
-
-  useEffect(() => {
-    getMovies();
-  }, []);
-
   return (
   
 
