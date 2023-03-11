@@ -3,8 +3,8 @@
     margin-bottom: 0;
 }
 .imgNav{
-    width: 100px;
-    height: 100px;
+    width: auto;
+    height:3.5rem;
   }
 .navgen{
     position: fixed;
@@ -15,8 +15,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 28px 12%;
+    padding: 0.1rem 1rem;
     transition: all 5s ease;
+    height: 4rem;
 }
 a{
     text-decoration: none;

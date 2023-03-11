@@ -1,21 +1,14 @@
 import './LoginPage.css'
 import { loginWithEmailAndPassword, signInWithGoogle } from "../../firebase/auth-service"
-import { LANDING_URL } from "../../constants/url"
-import { REGISTER_URL } from "../../constants/url"
 import { useState } from "react"
-import { useNavigate } from "react-router"
+
 
 export function LoginPage(){
 
   const handleLoginWithGoogle = async () => {
-    await signInWithGoogle().then( (result) => {
-      if(result) {
-        navigate(LANDING_URL)
-      }
-    })
+    await signInWithGoogle()
  }
 
- const navigate = useNavigate()
     const [formData, setFormData] = useState({
         email: "",
         password: ""
@@ -34,11 +27,7 @@ export function LoginPage(){
   event.preventDefault()
   const {email, password} = formData
 
-  await loginWithEmailAndPassword(email, password).then((result) => {
-    if (result === true) {
-      navigate(LANDING_URL)
-    }
-  });
+  await loginWithEmailAndPassword(email, password)
  }
 
     return(
