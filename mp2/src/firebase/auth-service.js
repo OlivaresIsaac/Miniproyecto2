@@ -8,15 +8,17 @@ export const signInWithGoogle = async () => {
     try {
         const result = await signInWithPopup(auth, googleProvider)
         const { isNewUser } = getAdditionalUserInfo(result)
-
-        //TODO pasar data con todo lo necesario, buscar la forma de pasar el boolean de isDoctor
         if(isNewUser){
             const newUser = new User(result.user.uid, result.user.displayName, result.user.email)
             await createUserProfile(result.user.uid, newUser.toObject())
         }
+        return true
 
     } catch (error) {
         console.log(error)
+        alert("Ha ocurrido un error inesperado, intentelo de nuevo")
+
+        return error
     }
 }
 
@@ -25,12 +27,22 @@ export const registerWithEmailAndPassword = async (email, password, allData) => 
     
         const result = await createUserWithEmailAndPassword(auth, email, password)
       
-        const newUser = new User(result.user.uid, allData.displayName, email, allData.isDoctor, allData.tlf, allData.preferedLanguage)
+        const newUser = new User(result.user.uid, allData.displayName, email)
             
         await createUserProfile(result.user.uid, newUser.toObject())
 
+        return true
+    
     } catch (error) {
         console.log(error)
+
+        if (error.code === "auth/email-already-in-use") {
+            alert("Alerta, usuario ya existe")
+          } else {
+            alert("Alerta, error al momento del registro, intente de nuevo")
+          }
+         
+        return error
 
     }
 }
@@ -38,8 +50,18 @@ export const registerWithEmailAndPassword = async (email, password, allData) => 
 export const loginWithEmailAndPassword = async (email, password) => {
     try {
         await signInWithEmailAndPassword(auth, email, password)
+        return true
     } catch (error) {
         console.log(error)
+        if (error.code === "auth/wrong-password") {
+            alert("Contraseña incorrecta");
+        } else if (error.code === "auth/user-not-found") {
+            alert("Usuario inexistente");
+        } else {
+            alert ("Ha ocurrido un error inesperado")
+        }
+        
+        return error
     }
 }
 
@@ -48,5 +70,6 @@ export const logout = async () => {
         await signOut(auth)
     } catch (error) {
         console.log(error)
+        alert("Ha ocurrido un error inesperado, por favor intente de nuevo");
     }
 }
