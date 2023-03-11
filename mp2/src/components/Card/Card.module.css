@@ -5,6 +5,9 @@
 
     background: linear-gradient(to left top, #db72fe, #000000);
 }
+.cardContainer:hover{
+    cursor:pointer;
+}
 
 .cardTitle{
     color: #c004ffff;
