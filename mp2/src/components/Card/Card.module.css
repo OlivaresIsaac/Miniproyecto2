@@ -1,0 +1,25 @@
+.cardContainer{
+    width: 250px;
+
+    border-radius: 0px 20px 0px 20px;
+
+    background: linear-gradient(to left top, #db72fe, #000000);
+}
+
+.cardTitle{
+    color: #c004ffff;
+    text-align: center;
+    padding: 5px;
+}
+
+.cardText{
+    font-size: 24px;
+    color: #000000;
+    text-align: center;
+    padding: 5px;
+    font-weight: bold;
+}
+
+.cardPoster{
+    width: 100%;
+}
