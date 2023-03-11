@@ -9,11 +9,11 @@ export function LandingPage(){
 const [currentMovies, setCurrentMovies] = useState([])
 
 useEffect(() => {
-    
+    console.log(currentMovies)
   }, [currentMovies])
 
     // const {user} = useUserContext(); 
-    // console.log(user)
+  
 
     return(
         
@@ -21,12 +21,17 @@ useEffect(() => {
         
             <Searcher movieSetter={setCurrentMovies}/> 
 
+            <div className="movie-flex">
+
            {
             currentMovies.map((movie, key) => {
-                return ( 
-                <Card movie={movie} key={key}/>
+                return (
+                    <div className="card"> 
+                        <Card movie={movie} key={movie.id}/>
+                    </div>
             )})
            }
+            </div>
 
         </div>
      
