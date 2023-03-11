@@ -33,6 +33,9 @@ useEffect(() => {
            }
             </div>
 
+           <button className="boton">New Movies</button>
+           <button className="boton">Next Movies</button>
+
         </div>
      
     )
