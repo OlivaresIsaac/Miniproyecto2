@@ -10,7 +10,7 @@
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: linear-gradient(to right, black,#9a3409);
+    background: #ff4d00;
 }
 
 form{
@@ -46,8 +46,9 @@ form label input{
 form button{
     color: white;
     border: none;
-    background: #9a3409;
+    background: #ff4d00;
     padding: 10px 15px;
     cursor: pointer;
     margin-bottom: 10px;
+    font-size: 18px;
 }
