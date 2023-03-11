@@ -1,13 +1,58 @@
-.fondoSearch{
+::-webkit-scrollbar {
+        display: none;
+}
+
+.fondo{
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
     background-color: linear-gradient(to right, black, #51047D);
-    overflow-y: auto;
+    
+}
+.main-fondo {
+    background-color: linear-gradient(to right, black, #51047D);
 }
 
 .main-column {
     display: flex;
     flex-direction: column;
+}
+
+.movie-flex {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.card {
+    padding: 1rem;
+}
+.boton{
+    margin-top: 10px;
+    font-size: large;
+    color: white;
+    border: none;
+    background: #000;
+    padding: 10px 15px;
+    cursor: pointer;
+    box-shadow: 0 5px 10px black;
+}
+.botontop{
+    margin-top: 10px;
+    font-size: large;
+    color: white;
+    border: none;
+    background: #000;
+    padding: 10px 15px;
+    cursor: pointer;
+    box-shadow: 0 5px 10px black;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.masarriba{
+    display: flex;
+    flex-direction: row;
 }

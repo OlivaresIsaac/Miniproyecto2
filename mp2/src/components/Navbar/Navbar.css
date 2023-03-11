@@ -1,12 +1,13 @@
-*{
+/* *{
     background: black;
     margin-bottom: 0;
-}
+} */
 .imgNav{
     width: auto;
     height:3.5rem;
   }
 .navgen{
+    background-color: black;
     position: fixed;
     width: 100%;
     top: 0;

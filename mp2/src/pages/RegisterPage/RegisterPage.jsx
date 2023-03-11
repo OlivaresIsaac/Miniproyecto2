@@ -54,10 +54,10 @@ const handleSubmit = async (event) => {
               <input type={"email"} placeholder='Mail' className='username' name="email" onChange={handleOnChange}></input>
             </label>
             <label>
-              <input type={'password'} placeholder='Password' className='password' name="password" onChange={handleOnChange}></input>
+              <input type={'password'} placeholder='Password' className='password' name="password" onChange={handleOnChange} required minLength={6}></input>
             </label>
             <label>
-              <input type={'password'} placeholder='Confirm Password' className='password' name="confirmPassword" onChange={handleOnChange}></input>
+              <input type={'password'} placeholder='Confirm Password' className='password' name="confirmPassword" onChange={handleOnChange} required minLength={6}></input>
             </label>
 
             <button className='button-login' type="submit">Register</button>

@@ -1,4 +1,4 @@
-import { LANDING_URL, LOGIN_URL,REGISTER_URL } from "./constants/url";
+import { LANDING_URL, LOGIN_URL,REGISTER_URL, DETAIL_URL } from "./constants/url";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import { LandingPage } from "./pages/LandingPage/LandingPage";
 import { LoginPage } from "./pages/LoginPage/LoginPage";
@@ -43,9 +43,14 @@ function App() {
 
 //           <Route path={REGISTER_URL} exact={true} element={<RegisterPage />} />
 
-//           <Route path="*" exact={true} element={<h1> NOT FOUND</h1>} /> 
-//         </Route>
-//         {/* </Route> */}
+          <Route path={DETAIL_URL} exact={true} element={
+              <PrivateRoute>
+               <DetailPage/>
+              </PrivateRoute>} />
+
+          <Route path="*" exact={true} element={<h1> NOT FOUND</h1>} /> 
+        </Route>
+        {/* </Route> */}
        
 //       </Routes>
 
