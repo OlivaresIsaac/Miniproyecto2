@@ -10,38 +10,48 @@ import { useEffect } from "react";
 import { fetchMovies } from "./utils/api";
 import { useMovies } from "./hooks/useMovies";
 import Card from "./components/Card/Card";
+import DetailCard from "./components/DetailCard/DetailCard";
 
 function App() {
+  const {getMovieById, singleMovie, isloading} = useMovies();
 
-  return (
+  useEffect(() => {
+    getMovieById(500)
+  }, [])
 
-    <BrowserRouter>
+    return(
+      <DetailCard movie={singleMovie}/>
+    )
 
-    {/* <Sidebar /> */}
+//   return (
+
+//     <BrowserRouter>
+
+//     {/* <Sidebar /> */}
  
-      <Routes>
-        <Route element={<Layout/>}>
-        {/* Layout */}
-        {/* <Route path={LANDING_URL} exact={true} element={
-                <LandingPage/>}/> */}
-          <Route path={LANDING_URL} exact={true} element={
-               <PrivateRoute>
-               <LandingPage/>
-              </PrivateRoute>}/>
+//       <Routes>
+//         <Route element={<Layout/>}>
+//         {/* Layout */}
+//         {/* <Route path={LANDING_URL} exact={true} element={
+//                 <LandingPage/>}/> */}
+//           <Route path={LANDING_URL} exact={true} element={
+//                <PrivateRoute>
+//                <LandingPage/>
+//               </PrivateRoute>}/>
           
-          <Route path={LOGIN_URL} exact={true} element={<LoginPage />} />
+//           <Route path={LOGIN_URL} exact={true} element={<LoginPage />} />
 
-          <Route path={REGISTER_URL} exact={true} element={<RegisterPage />} />
+//           <Route path={REGISTER_URL} exact={true} element={<RegisterPage />} />
 
-          <Route path="*" exact={true} element={<h1> NOT FOUND</h1>} /> 
-        </Route>
-        {/* </Route> */}
+//           <Route path="*" exact={true} element={<h1> NOT FOUND</h1>} /> 
+//         </Route>
+//         {/* </Route> */}
        
-      </Routes>
+//       </Routes>
 
 
-</BrowserRouter>
-  );
+// </BrowserRouter>
+//   );
 }
 
 export default App;

@@ -1,8 +1,7 @@
 import React from 'react';
 import styles from "./Card.module.css";
 
-export default function Card({movie}) {
-
+function Card({movie}) {
     const BASE_IMG_URL = "https://image.tmdb.org/t/p/original";
 
     return (
@@ -14,3 +13,5 @@ export default function Card({movie}) {
         </div>
     );
 }
+
+export default Card
