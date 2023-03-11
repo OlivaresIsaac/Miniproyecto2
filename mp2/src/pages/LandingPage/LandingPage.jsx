@@ -16,7 +16,8 @@ useEffect(() => {
     // console.log(user)
 
     return(
-        <div className="fondoSearch main-column">
+        
+        <div className="fondo main-column">
         
             <Searcher movieSetter={setCurrentMovies}/> 
 
@@ -28,5 +29,6 @@ useEffect(() => {
            }
 
         </div>
+     
     )
 }

@@ -1,10 +1,14 @@
-.fondoSearch{
+.fondo{
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
     background-color: linear-gradient(to right, black, #51047D);
     overflow-y: auto;
+    
+}
+.main-fondo {
+    background-color: linear-gradient(to right, black, #51047D);
 }
 
 .main-column {
