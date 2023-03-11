@@ -6,10 +6,6 @@ import { RegisterPage } from "./pages/RegisterPage/RegisterPage";
 import { Layout } from "./components/Layout/Layout";
 import { PrivateRoute } from "./components/PrivateRoute/PrivateRoute";
 import './App.css';
-import { useEffect } from "react";
-import { fetchMovies } from "./utils/api";
-import { useMovies } from "./hooks/useMovies";
-import Card from "./components/Card/Card";
 
 function App() {
 
