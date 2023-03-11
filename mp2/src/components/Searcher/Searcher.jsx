@@ -4,16 +4,18 @@ import { fetchMovieName} from "../../utils/api"
 import { FaSearch } from 'react-icons/fa'
 
 
-export function Searcher({movieSetter}){
-    const [movieInput, setMovieInput] = useState("")
+export function Searcher({movieSetter, setbusq, setMovieInput, actPage}){
+    const [movieInputAux, setMovieInputAux] = useState("")
 
     const handleOnChange =  (event) => {
         const {value} = event.target
         setMovieInput(value)
+        setMovieInputAux(value)
     }
 
     const submit = async () => {
-        const query = await fetchMovieName(movieInput, 1)
+        const query = await fetchMovieName(movieInputAux, actPage)
+        setbusq(2)
         movieSetter(query.data.results)
     }
 
