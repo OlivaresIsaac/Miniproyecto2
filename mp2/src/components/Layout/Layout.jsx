@@ -1,7 +1,19 @@
+import { Outlet } from "react-router";
+import { UserContextProvider } from "../../contexts/UserContext";
+import Navbar from "../Navbar/Navbar";
+import './Layout.css'
+
 export function Layout(){
     return(
-        <>
-        <h1>Soy layout</h1>
-        </>
+        <div> 
+            <main className="main_flex">
+                <UserContextProvider> 
+                <Navbar/>
+                <section className="body main-body">
+                    <Outlet />
+                </section>
+                </UserContextProvider>
+            </main>
+        </div>
     )
 }
