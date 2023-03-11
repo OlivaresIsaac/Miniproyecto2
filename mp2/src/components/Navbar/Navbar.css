@@ -1,0 +1,36 @@
+*{
+    background: black;
+    margin-bottom: 0;
+}
+.imgNav{
+    width: 100px;
+    height: 100px;
+  }
+.navgen{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 28px 12%;
+    transition: all 5s ease;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    margin-right: 6px;
+}
+.navder{
+    display: flex;
+    flex-direction: row;
+}
+.Navtxt{
+    margin-left: 1rem;
+}
+
+
+

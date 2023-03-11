@@ -27,6 +27,11 @@
 .App-link {
   color: #61dafb;
 }
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Oswald', sans-serif;
+}
 
 @keyframes App-logo-spin {
   from {
@@ -36,3 +41,11 @@
     transform: rotate(360deg);
   }
 }
+html {
+  font-size: 12px;
+  scroll-behavior: smooth;
+}
+
+@media (min-width: 640px) { html {font-size:16px;} }
+@media (min-width:960px) { html {font-size:19px;} }
+@media (min-width:1100px) { html {font-size:25px;} }
