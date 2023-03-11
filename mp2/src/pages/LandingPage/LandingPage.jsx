@@ -17,8 +17,16 @@ console.log(currentMovies)
 
     return(
         <div className="fondo main-column">
-            <h1>Soy landing</h1>
+        
             <Searcher movieSetter={setCurrentMovies}/> 
+
+           {
+            currentMovies.map((movie, key) => {
+                return ( 
+                <h1>{movie.title}</h1>
+            )})
+           }
+
         </div>
     )
 }

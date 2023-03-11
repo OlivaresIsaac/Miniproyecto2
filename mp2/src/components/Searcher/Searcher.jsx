@@ -1,30 +1,39 @@
 import './Searcher.css'
 import { useState, useEffect } from "react"
 import { fetchMovieName} from "../../utils/api"
+import { FaSearch } from 'react-icons/fa'
+import { Component } from '@firebase/component'
 
 export function Searcher({movieSetter}){
     const [movieInput, setMovieInput] = useState("")
 
-    const handleOnChange = async (event) => {
+    const handleOnChange =  (event) => {
         const {value} = event.target
         setMovieInput(value)
-        const query = await fetchMovieName(value)
+    }
+
+    const submit = async () => {
+        const query = await fetchMovieName(movieInput)
         movieSetter(query.data.results)
     }
 
-    useEffect(() => {
-    console.log(movieInput)
-  }, [movieInput])
+//     useEffect(() => {
+//     console.log(movieInput)
+//   }, [movieInput])
 
     return(
         <div className='input-container'> 
+            <input placeholder='Find movies' onChange={handleOnChange} className="input"></input>
 
-            <form>
-            <label> 
-            <   input placeholder='Find movies' onChange={handleOnChange}></input>
-            </label>
-            </form>
-            <h1> Soy searchers</h1>
+           <button onClick={submit}> <FaSearch className='icon' size={20}/></button> 
+           
+          
         </div>
     )
 }
+
+// class SearchIcon extends Component {
+//     render(){
+//         return  <FaCreativeCommonsNd />
+//     }
+// }

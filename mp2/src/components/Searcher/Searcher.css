@@ -1,3 +1,27 @@
 .input-container {
-    background-color: red;
+    display: flex;
+    flex-direction: row;
+}
+
+.input{
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    border:2px solid black;
+    
+}
+.icon{
+    background-color: wheat;
+    height: 100%;
+    width: 100%;
+    border: 5px;
+    border-color: black;
+}
+
+.submit {
+
+}
+
+form label {
+    border-radius: 500px;
 }

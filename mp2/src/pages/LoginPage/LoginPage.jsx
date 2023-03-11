@@ -43,7 +43,7 @@ export function LoginPage(){
 
     return(
         <div className='fondo'>
-          <form onSubmit={handleOnSubmit}>
+          <form onSubmit={handleOnSubmit} className="form">
             <h1 className='titulo'>Login</h1>
             <label>
               <input placeholder='Email' className='username' name='email' onChange={handleOnChange}></input>
