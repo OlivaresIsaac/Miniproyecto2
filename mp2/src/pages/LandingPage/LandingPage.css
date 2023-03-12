@@ -56,3 +56,8 @@
     display: flex;
     flex-direction: row;
 }
+.error{
+    background-color: #000;
+    color: white;
+    margin-top: 3rem;
+}

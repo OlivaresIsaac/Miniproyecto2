@@ -20,6 +20,9 @@ const [movieInput, setMovieInput] = useState("")
 
     // const {user} = useUserContext(); 
     // console.log(user)
+    useEffect(()=>{
+        submitNext()
+    }, [])
     const Next = async () => {
         setpage(actpag + 1)
         if (busqact === 1){
@@ -30,8 +33,6 @@ const [movieInput, setMovieInput] = useState("")
             submitNext()
         }
 
-
-        
         
     }
     const Back = async () => {
@@ -65,8 +66,7 @@ const [movieInput, setMovieInput] = useState("")
         const query = await fetchMovieName(movieInput, actpag)
         setCurrentMovies(query.data.results)
         setbusq(2)
-    }
-
+    }  
 
     return(
         
@@ -86,15 +86,17 @@ const [movieInput, setMovieInput] = useState("")
 
 
             <div className="movie-flex">
-
-           {
-            currentMovies.map((movie, key) => {
-                return (
-                    <div className="card"> 
-                        <Card movie={movie} key={movie.id}/>
-                    </div>
-            )})
-           }
+            {currentMovies.length === 0 &&(
+                <p className="error">404 NOT FOUND</p>
+            )}
+                {
+                 currentMovies.map((movie, key) => {
+                     return (
+                         <div className="card"> 
+                             <Card movie={movie} key={movie.id}/>
+                         </div>
+                 )})
+                }
             </div>
 
            
