@@ -13,35 +13,26 @@ import Card from "./components/Card/Card";
 import DetailCard from "./components/DetailCard/DetailCard";
 
 function App() {
-  const {getMovieById, singleMovie, isloading} = useMovies();
 
-  useEffect(() => {
-    getMovieById(500)
-  }, [])
+  return (
 
-    return(
-      <DetailCard movie={singleMovie}/>
-    )
+    <BrowserRouter>
 
-//   return (
-
-//     <BrowserRouter>
-
-//     {/* <Sidebar /> */}
+    {/* <Sidebar /> */}
  
-//       <Routes>
-//         <Route element={<Layout/>}>
-//         {/* Layout */}
-//         {/* <Route path={LANDING_URL} exact={true} element={
-//                 <LandingPage/>}/> */}
-//           <Route path={LANDING_URL} exact={true} element={
-//                <PrivateRoute>
-//                <LandingPage/>
-//               </PrivateRoute>}/>
+      <Routes>
+        <Route element={<Layout/>}>
+        {/* Layout */}
+        {/* <Route path={LANDING_URL} exact={true} element={
+                <LandingPage/>}/> */}
+          <Route path={LANDING_URL} exact={true} element={
+               <PrivateRoute>
+               <LandingPage/>
+              </PrivateRoute>}/>
           
-//           <Route path={LOGIN_URL} exact={true} element={<LoginPage />} />
+          <Route path={LOGIN_URL} exact={true} element={<LoginPage />} />
 
-//           <Route path={REGISTER_URL} exact={true} element={<RegisterPage />} />
+          <Route path={REGISTER_URL} exact={true} element={<RegisterPage />} />
 
           <Route path={DETAIL_URL} exact={true} element={
               <PrivateRoute>
@@ -52,11 +43,11 @@ function App() {
         </Route>
         {/* </Route> */}
        
-//       </Routes>
+      </Routes>
 
 
-// </BrowserRouter>
-//   );
+</BrowserRouter>
+  );
 }
 
 export default App;

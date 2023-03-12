@@ -22,7 +22,3 @@ export async function fetchUpcoming(page){
 export async function fetchMovieName(movie_name, page){
     return axiosInstance.get(`/search/movie${KEY}&query=${movie_name}&page=${page}`);
 }
-
-export async function fetchGenres(){
-    
-}

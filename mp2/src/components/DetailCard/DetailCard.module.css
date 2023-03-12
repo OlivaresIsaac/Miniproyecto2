@@ -1,22 +1,104 @@
 .detailContainer{
     margin: auto;
-    background-color: red;
+    background: linear-gradient(to left, #7c0bbe, black);
     width: 70%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(300px, auto);
+
+    color: white;
 }
 
 .detailPoster{
-    width: 20%;
+    grid-column: 1/2;
+    grid-row: 1/4;
+    width: 100%;
+    padding: 10px;
 }
 
 .detailTitle{
+    grid-column: 2/5;
     background-color: transparent;
-    color: white;
+    text-align: center;
+}
+
+.detailTextContainer{
+    background-color: transparent;
+    grid-column: 2/4;
+    grid-row: 2/4;
+}
+.detailCompanies{
+    grid-column: 4/5;
+    grid-row: 2/4;
+    text-align: center;
+}
+
+.detailOverview{
+    grid-column: 1/5;
+    grid-row: 4/6;
+    padding: 30px;
+}
+
+.detailGenres{
+    display: flex;
+    grid-column: 1/5;
+    grid-row: 6/7;
+
+    padding-left: 30px;
 }
 
 .detailText{
     background-color: transparent;
+    padding: 10px;
 }
 
 .detailCompany{
     background-color: transparent;
+}
+
+@media (max-width: 640px) {
+    .detailTextContainer{
+        background-color: transparent;
+        grid-column: 3/5;
+        grid-row: 2/4;
+    }
+    .detailTitle{
+        grid-column: 3/5;
+        background-color: transparent;
+        text-align: center;
+    }
+    .detailPoster{
+        grid-column: 1/3;
+        grid-row: 1/4;
+        width: 100%;
+        padding: 10px;
+    }
+    .detailCompanies{
+        grid-column: 1/5;
+        grid-row: 4/6;
+        text-align: center;
+    }
+    .detailOverview{
+        grid-column: 1/5;
+        grid-row: 6/8;
+        padding: 30px;
+    }
+    .detailGenres{
+        display: flex;
+        grid-column: 1/5;
+        grid-row: 8/10;
+    
+        padding-left: 30px;
+    }
+    .detailContainer{
+        margin: auto;
+        font-size: 12px;
+        background: linear-gradient(to left, #7c0bbe, black);
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(300px, auto);
+    
+        color: white;
+    }
 }
