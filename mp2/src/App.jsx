@@ -2,6 +2,7 @@ import { LANDING_URL, LOGIN_URL,REGISTER_URL, DETAIL_URL } from "./constants/url
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import { LandingPage } from "./pages/LandingPage/LandingPage";
 import { LoginPage } from "./pages/LoginPage/LoginPage";
+import { DetailPage } from "./pages/DetailPage/DetailPage";
 import { RegisterPage } from "./pages/RegisterPage/RegisterPage";
 import { Layout } from "./components/Layout/Layout";
 import { PrivateRoute } from "./components/PrivateRoute/PrivateRoute";
@@ -14,19 +15,22 @@ import DetailCard from "./components/DetailCard/DetailCard";
 
 function App() {
 
-  return (
+    // return(
+    //   <DetailCard movie={singleMovie}/>
+    // )
 
-    <BrowserRouter>
+   return (
+     <BrowserRouter>
 
-    {/* <Sidebar /> */}
+     {/* <Sidebar /> */}
  
       <Routes>
         <Route element={<Layout/>}>
-        {/* Layout */}
-        {/* <Route path={LANDING_URL} exact={true} element={
-                <LandingPage/>}/> */}
+         {/* Layout */}
+         {/* <Route path={LANDING_URL} exact={true} element={
+                 <LandingPage/>}/> */}
           <Route path={LANDING_URL} exact={true} element={
-               <PrivateRoute>
+                <PrivateRoute>
                <LandingPage/>
               </PrivateRoute>}/>
           
@@ -43,11 +47,11 @@ function App() {
         </Route>
         {/* </Route> */}
        
-      </Routes>
+       </Routes>
 
 
-</BrowserRouter>
-  );
+ </BrowserRouter>
+   );
 }
 
 export default App;

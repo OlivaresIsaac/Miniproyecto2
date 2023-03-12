@@ -13,6 +13,10 @@
     color: #c004ffff;
     text-align: center;
     padding: 5px;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .cardText{
