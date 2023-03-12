@@ -12,14 +12,7 @@ const [currentMovies, setCurrentMovies] = useState([])
 const [actpag, setpage] = useState(1)
 const [busqact, setbusq] = useState(0)
 const [movieInput, setMovieInput] = useState("")
-// 0 es nada, 1 es new, 2 es por nombre, 3 proximas
-// useEffect(() => {
-//     submitByName()
-//     console.log("hola")
-//   }, [movieInput])
 
-    // const {user} = useUserContext(); 
-    // console.log(user)
     useEffect(()=>{
         submitNext()
     }, [])

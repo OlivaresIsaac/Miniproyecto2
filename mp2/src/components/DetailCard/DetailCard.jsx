@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import { useMovies } from '../../hooks/useMovies';
+import React from 'react'
+
 import styles from "./DetailCard.module.css"
 
 function DetailCard({movie}) {
@@ -32,7 +32,7 @@ function DetailCard({movie}) {
             
             <p className={styles.detailOverview}>{movie.overview}</p>
             <div className={styles.detailGenres}>
-            <h3>Genres: </h3>
+            <h3 className={styles.alignitems}>Genres: </h3>
             {
                 movie.genres.map((genre, key) => {
                     return(

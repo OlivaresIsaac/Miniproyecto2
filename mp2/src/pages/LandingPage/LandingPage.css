@@ -39,6 +39,8 @@
     padding: 10px 15px;
     cursor: pointer;
     box-shadow: 0 5px 10px black;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .botontop{
     margin-top: 10px;
@@ -55,6 +57,8 @@
 .masarriba{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .error{
     background-color: #000;

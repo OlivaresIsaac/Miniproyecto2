@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from "./Card.module.css";
 import { useNavigate } from "react-router"
-import { DETAIL_URL } from '../../constants/url';
+
 
 export default function Card({movie}) {
     const navigate = useNavigate()
